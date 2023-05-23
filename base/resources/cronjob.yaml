@@ -21,7 +21,7 @@ spec:
             name: integration-cip-havochvatten
             image: ghcr.io/diwise/integration-cip-havochvatten:changeme
             imagePullPolicy: IfNotPresent
-            args: ["-nutscodes=$(NUTS_CODES)", "-output=fiware"]
+            args: ["-nutscodes=$(NUTS_CODES)", "-output=lwm2m"]
             resources:
               limits:
                 cpu: 100m
