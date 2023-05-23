@@ -13,21 +13,21 @@ spec:
             sidecar.istio.io/inject: "false"
         spec:
           containers:
-          - env:
-            - name: POD_NAMESPACE
-              valueFrom:
-                fieldRef:
-                  fieldPath: metadata.namespace
-            name: integration-cip-havochvatten
-            image: ghcr.io/diwise/integration-cip-havochvatten:changeme
-            imagePullPolicy: IfNotPresent
-            args: ["-nutscodes=$(NUTS_CODES)", "-output=lwm2m"]
-            resources:
-              limits:
-                cpu: 100m
-                memory: 250Mi
-              requests:
-                cpu: 50m
-                memory: 100Mi
+            - env:
+                - name: POD_NAMESPACE
+                  valueFrom:
+                    fieldRef:
+                      fieldPath: metadata.namespace
+              name: integration-cip-havochvatten
+              image: ghcr.io/diwise/integration-cip-havochvatten:changeme
+              imagePullPolicy: IfNotPresent
+              args: ["-nutscodes=$(NUTS_CODES)", "-output=lwm2m"]
+              resources:
+                limits:
+                  cpu: 100m
+                  memory: 250Mi
+                requests:
+                  cpu: 50m
+                  memory: 100Mi
           restartPolicy: Never
           serviceAccountName: integration-cip-havochvatten
