@@ -1,3 +1,3 @@
 - op: replace
   path: "/spec/jobTemplate/spec/template/spec/containers/0/image"
-  value: ghcr.io/diwise/integration-cip-havochvatten@sha256:4918cc15697e422786dbde87a6c0163ec1ea1c7b67e09ec810dbeaf0f7fb0a7a
+  value: ghcr.io/diwise/integration-cip-havochvatten@sha256:8f37f394a5cd6f05046d84240024bcf051703db38c00587b0d308d7ed1653e03
